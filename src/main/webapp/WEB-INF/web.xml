@@ -1,0 +1,29 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>自定义实现mvc框架</display-name>
+
+    <listener>
+        <listener-class>com.udem.mvcframework.servlet.DisPatcherServlet</listener-class>
+    </listener>
+
+
+    <!--    定义servlet-->
+    <servlet>
+        <servlet-name>mvc-servlte</servlet-name>
+        <servlet-class>com.udem.mvcframework.servlet.DisPatcherServlet</servlet-class>
+    </servlet>
+
+    <!--    处理请求 -->
+    <servlet-mapping>
+        <servlet-name>mvc-servlte</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+
+
+</web-app>
